@@ -1,7 +1,11 @@
 
-const JwtPassport = require("passport-jwt")
-const { UserModel } = require("../database/allModels");
-const {Router} = require("express")
+
+// const JwtPassport = require("passport-jwt")
+import JwtPassport  from "passport-jwt"
+// const { UserModel } = require("../database/allModels");
+import { UserModel } from "../database/allModels.js";
+import {Router} from "express"
+//const {Router} = require("express")
 
 const JWTStrategy = JwtPassport.Strategy;
 const ExtractJwt = JwtPassport.ExtractJwt;

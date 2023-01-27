@@ -1,6 +1,6 @@
 import express from "express";
 import passport from "passport";
-import { OrderModel } from "../../database/order";
+import { OrderModel } from "../../database/order/index.js";
 
 const Router = express.Router();
 

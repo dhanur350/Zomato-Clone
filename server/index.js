@@ -1,31 +1,52 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const passport = require('passport');
-const session = require('express-session');
-const cors = require('cors');
-const helmet = require('helmet');
+// const express = require('express');
+// const dotenv = require('dotenv');
+// const passport = require('passport');
+// const session = require('express-session');
+// const cors = require('cors');
+// const helmet = require('helmet');
 
+
+// // Private route authorization config
+// const privateRouteConfig = require("./config/route.config");
+// const googleAuthConfig = require("./config/google.config");
+
+// // Database connection
+// const ConnectDB = require('"./database/connection"');
+// const Auth = require("./api/auth");
+// const Food = require("./api/food");
+// const Restaurant = require("./api/restaurant");
+// const User = require("./api/user");
+// const Menu = require("./api/menu");
+// const Order = require("./api/order");
+// const Review = require("./api/review");
+// const Image = require ("./api/image");
+import express from "express";
+import dotenv from "dotenv";
+import passport from "passport";
+import session from "express-session";
+import cors from "cors";
+import helmet from "helmet";
 
 // Private route authorization config
-const privateRouteConfig = require("./config/route.config");
-const googleAuthConfig = require("./config/google.config");
+import privateRouteConfig from "./config/route.config.js";
+import googleAuthConfig from "./config/google.config.js";
 
 // Database connection
-const ConnectDB = require('"./database/connection"');
-const Auth = require("./api/auth");
-const Food = require("./api/food");
-const Restaurant = require("./api/restaurant");
-const User = require("./api/user");
-const Menu = require("./api/menu");
-const Order = require("./api/order");
-const Review = require("./api/review");
-const Image = require ("./api/image");
+import ConnectDB from "./database/connection.js";
 
+import Auth from "./api/auth/index.js";
+import Food from "./api/food/index.js";
+import Restaurant from "./api/restaurant/index.js";
+import User from "./api/user/index.js";
+import Menu from "./api/menu/index.js";
+import Order from "./api/order/index.js";
+import Review from "./api/review/index.js";
+// import Image from "./api/";
 
 dotenv.config();
 
 const zomato = express();
-PrivateRouteConfig(passport);
+privateRouteConfig(passport);
 
 zomato.use(express.json());
 zomato.use(session({ secret: "ZomatoApp" }));

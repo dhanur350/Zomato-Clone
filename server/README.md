@@ -1,8 +1,5 @@
 # Initial SetUp
 
-https://github.com/rohan1917/zomato-clone
-
-git clone https://github.com/rohan1917/zomato-clone
 cd zomato-clone
 mkdir server
 cd server

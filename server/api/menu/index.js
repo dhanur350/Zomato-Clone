@@ -1,6 +1,6 @@
 import express from "express";
-import { MenuModel } from "../../database/menu";
-import { ValidateId } from "../../validation/common.validation";
+import { MenuModel } from "../../database/menu/index.js";
+import { ValidateId } from "../../validation/common.validation.js";
 
 const Router = express.Router();
 

@@ -1,7 +1,7 @@
 import express from "express";
 
-import { FoodModel } from "../../database/allModels";
-import { ValidateCategory, ValidateId } from "../../validation/common.validation";
+import { FoodModel } from "../../database/allModels.js";
+import { ValidateCategory, ValidateId } from "../../validation/common.validation.js";
 
 const Router = express.Router();
 

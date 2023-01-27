@@ -1,10 +1,10 @@
 import express from "express";
 
-import { RestaurantModel } from "../../database/allModels";
+import { RestaurantModel } from "../../database/allModels.js";
 import {
   ValidateId,
   ValidateSearchString,
-} from "../../validation/common.validation";
+} from "../../validation/common.validation.js";
 
 const Router = express.Router();
 
